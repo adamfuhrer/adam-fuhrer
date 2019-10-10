@@ -85,7 +85,8 @@
                     height: 100px
                 }
 
-                .dot {
+                &::after {
+                    content: '';
                     position: absolute;
                     top: 0;
                     right: -10px;
@@ -94,12 +95,16 @@
                     border-radius: 50%;
                     background: $grey;
                     box-shadow: $box-shadow-weak;
+                }
 
-                    &.start {
+                &.start {
+                    &::after {
                         background: $green;
                     }
+                }
 
-                    &.end {
+                &.end {
+                    &::after {
                         background: $red;
                     }
                 }
