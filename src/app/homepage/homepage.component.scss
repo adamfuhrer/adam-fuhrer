@@ -82,12 +82,18 @@
     }
 
     .github {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 20px); // 20px is half button width
         width: 40px;
         height: 40px;
-        position: fixed;
-        bottom: 14px;
-        left: 50%;
-        transform: translateX(-50%);
+        background: $off-white;
+        border-radius: 5px;
+        border: 1px solid $light-grey;
+        box-shadow: $box-shadow-weak;
 
         svg {
             width: 18px;
@@ -95,7 +101,10 @@
             transition: $transition-normal;
         }
 
-        &:hover, &:focus {
+        &:hover {
+            transition: $transition-normal;
+            transform: translateY(-4px);
+
             svg {
                 fill: $pink;
             }
