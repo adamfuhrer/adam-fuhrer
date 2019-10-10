@@ -1,33 +1,33 @@
 @import 'styles/base';
 
 button {
-  border: 0;
-  background: none;
-  margin: 0;
-  padding: 0;
-  font-family: $sans-serif;
-  font-size: 1.4rem;
-
-  &::-moz-focus-inner {
     border: 0;
-  }
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-family: $sans-serif;
+    font-size: 1.4rem;
 
-  &:hover {
-    cursor: pointer;
-  }
+    &::-moz-focus-inner {
+        border: 0;
+    }
 
-  &:focus {
-    outline: none;
-  }
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 a {
-  color: $teal;
-  text-decoration: none;
-  transition: $transition-normal;
+    color: $teal;
+    text-decoration: none;
+    transition: $transition-normal;
 
-  &:hover, &:focus {
-    color: lighten($teal, 10%);
-    outline: none;
-  }
+    &:hover, &:focus {
+        color: lighten($teal, 10%);
+        outline: none;
+    }
 }

@@ -1,39 +1,39 @@
 @import '../../../styles/vars';
 
 :host {
-  position: absolute;
-  top: -60px;
-  left: -20px;
+    position: absolute;
+    top: -60px;
+    left: -20px;
 
-  button.back {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    padding-left: 14px;
-    padding-right: 14px;
-    color: $teal;
-    font-size: 1.6rem;
-    font-weight: $semi-bold;
-    transition: $transition-normal;
+    button.back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding-left: 14px;
+        padding-right: 14px;
+        color: $teal;
+        font-size: 1.6rem;
+        font-weight: $semi-bold;
+        transition: $transition-normal;
 
-    &:hover, &:focus {
-      color: lighten($teal, 10%);
+        &:hover, &:focus {
+            color: lighten($teal, 10%);
+        }
+
+        svg {
+            transform: rotate(90deg);
+            fill: $grey;
+            width: 10px;
+            min-width: 10px;
+        }
+
+        .text {
+            margin-left: 6px;
+        }
     }
 
-    svg {
-      transform: rotate(90deg);
-      fill: $grey;
-      width: 10px;
-      min-width: 10px;
+    @media screen and (max-width: 880px) {
+        top: -30px;
     }
-
-    .text {
-      margin-left: 6px;
-    }
-  }
-
-  @media screen and (max-width: 880px) {
-    top: -30px;
-  }
 }
