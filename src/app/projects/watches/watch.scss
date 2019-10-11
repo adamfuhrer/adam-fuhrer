@@ -14,7 +14,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .information-wrapper {
@@ -165,7 +165,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            border: 2px solid #E5E5E5;
+            border: 1px solid #DDDDDD;
             border-radius: 10px;
             height: 180px;
             width: 100%;
@@ -225,6 +225,7 @@
             .information-wrapper {
                 img {
                     width: 140px;
+                    min-width: 140px;
                     margin-right: 20px;
                 }
 
