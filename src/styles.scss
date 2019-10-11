@@ -31,3 +31,26 @@ a {
         outline: none;
     }
 }
+
+.card {
+    border: 1px solid $light-grey;
+    border-radius: 10px;
+    background: $off-white;
+    width: 100%;
+
+    &.clickable {
+        box-shadow: $box-shadow-weak;
+        transition: $transition-normal;
+
+        &:hover, &:focus {
+            transform: translateY(-4px);
+            box-shadow: $box-shadow-strong;
+            transition: $transition-normal;
+            outline: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
