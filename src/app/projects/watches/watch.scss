@@ -200,7 +200,7 @@
 
         img {
             border-radius: 5px;
-            max-width: 500px;
+            max-width: 580px;
             width: 100%;
         }
     }
@@ -209,6 +209,10 @@
         display: flex;
         justify-content: center;
         margin-top: 40px;
+
+        a {
+            margin-left: 6px;
+        }
     }
 
     @media screen and (max-width: 760px) {
