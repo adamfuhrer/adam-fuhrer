@@ -106,7 +106,7 @@ $head-shot-image-width: 130px;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
+        position: fixed;
         bottom: 24px;
         left: calc(50% - 20px); // 20px is half button width
         width: 40px;
@@ -152,6 +152,11 @@ $head-shot-image-width: 130px;
                 font-size: 4.2rem;
                 text-align: center;
             }
+        }
+
+        .github {
+            left: unset;
+            right: 24px;
         }
     }
 }
