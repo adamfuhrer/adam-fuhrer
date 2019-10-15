@@ -43,12 +43,11 @@
                     }
 
                     .value {
-                        font-weight: $semi-bold;
+                        font-weight: $medium;
                         color: $oil;
 
                         &.precision {
                             color: $pink;
-                            font-weight: $semi-bold;
                         }
                     }
 
@@ -149,7 +148,7 @@
                     .text {
                         margin-left: 6px;
                         color: $pink;
-                        font-weight: $semi-bold;
+                        font-weight: $medium;
                     }
                 }
             }
