@@ -51,7 +51,7 @@ $head-shot-image-width: 180px;
         .links-wrapper {
             display: flex;
             flex-direction: column;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
 
             .link {
                 display: flex;
@@ -119,6 +119,7 @@ $head-shot-image-width: 180px;
         border-radius: 5px;
         border: 1px solid $light-grey;
         box-shadow: $box-shadow-weak;
+        transition: $transition-normal;
 
         svg {
             width: 18px;
@@ -126,7 +127,7 @@ $head-shot-image-width: 180px;
             transition: $transition-normal;
         }
 
-        &:hover {
+        &:hover, &:focus {
             transition: $transition-normal;
             transform: translateY(-4px);
 

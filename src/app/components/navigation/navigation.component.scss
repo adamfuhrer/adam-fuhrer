@@ -32,27 +32,20 @@
                     content: '/';
                     color: $grey;
                     position: absolute;
-                    top: 8px;
+                    top: 10px;
                     right: -19px;
                 }
             }
 
-            &:hover {
-                transition: $transition-normal;
-                color: $oil;
-                cursor: pointer;
-            }
-
-            &:focus {
-                outline: none;
+            &:not(.is-active) {
+                &:hover, &:focus {
+                    transition: $transition-normal;
+                    color: $oil;
+                }
             }
 
             &.is-active {
                 color: $teal;
-
-                &:hover {
-                    color: $teal;
-                }
             }
         }
     }
@@ -64,7 +57,7 @@
 
                 &:not(:last-child) {
                     &::after {
-                        top: 3px;
+                        top: 5px;
                     }
                 }
             }

@@ -1,8 +1,8 @@
 <nav>
-    <div *ngFor="let breadcrumb of breadcrumbs"
-         class="breadcrumb"
-         [class.is-active]="breadcrumb.isActive"
-         [routerLink]="breadcrumb.routerLink">
+    <button *ngFor="let breadcrumb of breadcrumbs"
+            class="breadcrumb"
+            [class.is-active]="breadcrumb.isActive"
+            [routerLink]="breadcrumb.routerLink">
         {{breadcrumb.text}}
-    </div>
+    </button>
 </nav>
