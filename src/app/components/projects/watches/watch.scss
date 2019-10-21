@@ -108,6 +108,7 @@
             .week {
                 border-right: 3px solid $light-grey;
                 padding-right: 24px;
+                padding-left: 20px;
 
                 &.end {
                     border-right-color: transparent;
@@ -255,6 +256,10 @@
 
         .timeline {
             .week-row {
+                .week {
+                    padding-left: 0;
+                }
+
                 .average {
                     padding-left: 24px;
 
