@@ -87,21 +87,20 @@ $head-shot-image-width: 180px;
         }
 
         .projects {
-            height: 50px;
-            width: 140px;
-            min-width: 140px;
-            padding-left: 20px;
-            padding-right: 20px;
-            color: $white;
-            border-radius: 5px;
-            background: $teal;
+            height: 60px;
+            width: 200px;
+            min-width: 200px;
+            color: $orange;
+            border-radius: 10px;
+            border: 2px solid $orange;
+            background: #FDF7ED;
             transition: background 350ms $ease 0s;;
             font-weight: $semi-bold;
-            font-size: 1.6rem;
-            letter-spacing: 0.8px;
+            font-size: 1.8rem;
+            letter-spacing: 0.6px;
 
             &:hover, &:focus {
-                background: lighten($teal, 4%);
+                background: darken(#FDF7ED, 2%);
             }
         }
     }
