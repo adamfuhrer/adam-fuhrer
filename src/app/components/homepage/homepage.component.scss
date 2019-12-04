@@ -7,9 +7,47 @@ $head-shot-image-width: 190px;
     align-items: center;
 
     .content-wrapper {
+        position: relative;
         display: flex;
         width: 100%;
         justify-content: center;
+        margin-top: 20px;
+
+        .hanger {
+            position: absolute;
+            top: -100px;
+            left: calc(50% - 9px);
+
+            .thumbtack {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                background: $orange;
+                border-radius: 50%;
+                z-index: 1;
+                box-shadow: $box-shadow-weak;
+            }
+
+            .string {
+                position: absolute;
+                top: 55px;
+                width: 300px;
+                height: 3px;
+                background: $light-grey;
+
+                &.left {
+                    right: -14px;
+                    transform: rotate(-20deg);
+                }
+
+                &.right {
+                    transform: rotate(20deg);
+                    left: 4px;
+                }
+            }
+        }
 
         .card-wrapper {
             display: flex;
@@ -22,6 +60,7 @@ $head-shot-image-width: 190px;
             max-width: 680px;
             box-shadow: $box-shadow-strong;
             border: 1px solid #20A084;
+            z-index: 1;
 
             .profile {
                 display: flex;
@@ -161,6 +200,12 @@ $head-shot-image-width: 190px;
         margin-top: -80px;
 
         .content-wrapper {
+            margin-top: 0;
+
+            .hanger {
+                display: none;
+            }
+
             .card-wrapper {
                 padding-left: 30px;
                 padding-right: 30px;
