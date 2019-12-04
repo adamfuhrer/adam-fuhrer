@@ -22,12 +22,12 @@ button {
 }
 
 a {
-    color: $teal;
+    color: $orange;
     text-decoration: none;
     transition: $transition-normal;
 
     &:hover, &:focus {
-        color: lighten($teal, 6%);
+        color: lighten($orange, 6%);
         outline: none;
     }
 }

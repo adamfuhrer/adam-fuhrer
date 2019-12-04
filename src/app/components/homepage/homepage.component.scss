@@ -1,5 +1,5 @@
 @import '../../../styles/vars';
-$head-shot-image-width: 180px;
+$head-shot-image-width: 190px;
 
 :host {
     display: flex;
@@ -9,98 +9,119 @@ $head-shot-image-width: 180px;
     .content-wrapper {
         display: flex;
         width: 100%;
-        max-width: $content-width;
+        justify-content: center;
 
-        img.headshot {
-            width: $head-shot-image-width;
-            height: $head-shot-image-width;
-            min-width: $head-shot-image-width;
-            margin-right: 44px;
-            margin-top: 18px;
-        }
-
-        .right-content {
+        .card-wrapper {
             display: flex;
             flex-direction: column;
-        }
+            align-items: center;
+            background: $green;
+            border-radius: 15px;
+            padding: 50px;
+            width: 100%;
+            max-width: 680px;
+            box-shadow: $box-shadow-strong;
+            border: 1px solid #20a084;
 
-        .name-wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .name {
-            font-family: $serif;
-            font-size: 5.4rem;
-            font-weight: $regular;
-            color: $oil;
-            letter-spacing: 1.4px;
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .title {
-            font-size: 2.4rem;
-            font-style: italic;
-            font-weight: $regular;
-            color: $oil;
-        }
-
-        .links-wrapper {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 40px;
-
-            .link {
+            .profile {
                 display: flex;
                 align-items: center;
+                margin-bottom: 50px;
 
-                + .link {
-                    margin-top: 6px;
+                img.headshot {
+                    width: $head-shot-image-width;
+                    height: $head-shot-image-width;
+                    min-width: $head-shot-image-width;
+                    margin-right: 40px;
+                    border-radius: 50%;
+                    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
                 }
 
-                .icon {
+                .right-content {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 20px;
-                    height: 20px;
-                    min-width: 20px;
-                    margin-right: 6px;
+                    flex-direction: column;
 
-                    img {
-                        width: 20px;
-                        height: 20px;
-                        min-width: 20px;
-                        margin-right: 10px;
+                    .name-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        margin-bottom: 24px;
+
+                        .name {
+                            font-family: 'Amaranth', sans-serif;
+                            font-size: 5.4rem;;
+                            font-weight: $regular;
+                            color: $white;
+                            letter-spacing: 2px;
+                            line-height: 1;
+                        }
+
+                        .title {
+                            font-size: 3rem;
+                            font-weight: $light;
+                            font-style: italic;
+                            color: $white;
+                        }
+                    }
+
+                    .links-wrapper {
+                        display: flex;
+                        flex-direction: column;
+
+                        .link {
+                            display: flex;
+                            align-items: center;
+
+                            + .link {
+                                margin-top: 10px;
+                            }
+
+                            img {
+                                width: 22px;
+                                height: 22px;
+                                min-width: 22px;
+                                margin-right: 10px;
+                            }
+
+                            .text {
+                                font-size: 1.6rem;
+                                color: $white;
+                                font-weight: $semi-bold;
+
+                                a {
+                                    color: $white;
+                                    padding: 3px 5px;
+                                    border-radius: 5px;
+                                    background: rgba(255, 255, 255, 0.2);
+
+                                    &:hover, &:focus {
+                                        background: rgba(255, 255, 255, 0.3);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-
-                .text {
-                    font-size: 1.6rem;
-                    color: $oil;
-                    font-weight: $regular;
-                }
             }
-        }
 
-        .projects {
-            height: 60px;
-            width: 200px;
-            min-width: 200px;
-            color: $orange;
-            border-radius: 10px;
-            border: 2px solid $orange;
-            background: #FDF7ED;
-            transition: background 350ms $ease 0s;;
-            font-weight: $semi-bold;
-            font-size: 1.8rem;
-            letter-spacing: 0.6px;
+            .projects {
+                width: 100%;
+                max-width: 260px;
+                height: 54px;
+                background: rgba(255, 255, 255, 0.9);
+                color: $green;
+                border-radius: 8px;
+                box-shadow: $box-shadow-strong;
+                font-weight: $semi-bold;
+                font-size: 1.8rem;
+                letter-spacing: 0.6px;
+                transition: $transition-normal;
 
-            &:hover, &:focus {
-                background: darken(#FDF7ED, 2%);
+                &:hover, &:focus {
+                    background: rgba(255, 255, 255, 0.98);
+                    transition: $transition-normal;
+                    transform: translateY(-4px);
+                }
             }
         }
     }
@@ -137,40 +158,46 @@ $head-shot-image-width: 180px;
     }
 
     @media screen and (max-width: 880px) {
-        margin-top: -60px;
+        margin-top: -80px;
 
         .content-wrapper {
-            flex-direction: column;
-            align-items: center;
+            .card-wrapper {
+                padding-left: 30px;
+                padding-right: 30px;
 
-            img.headshot {
-                margin-top: 0;
-                margin-bottom: 20px;
-                margin-right: 0;
-                width: 150px;
-                height: 150px;
-                min-width: 150px;
-            }
+                .profile {
+                    flex-direction: column;
 
-            .name-wrapper {
-                height: 100%;
-                align-items: center;
-                margin-bottom: 40px;
-            }
+                    img.headshot {
+                        margin-bottom: 20px;
+                        margin-right: 0;
+                        width: 150px;
+                        height: 150px;
+                        min-width: 150px;
+                    }
 
-            .name {
-                font-size: 4.2rem;
-                text-align: center;
-            }
+                    .right-content {
+                        .name-wrapper {
+                            height: 100%;
+                            align-items: center;
+                            margin-bottom: 40px;
 
-            .projects {
-                width: 100%;
+                            .name {
+                                font-size: 4.2rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .projects {
+                    max-width: 100%;
+                }
             }
         }
 
         .github {
-            left: unset;
-            right: 24px;
+            display: none;
         }
     }
 }
