@@ -12,12 +12,24 @@
         max-width: $content-width;
 
         h1 {
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
 
         .link {
+            color: #E68C0F;
+            border: 1px solid #E68C0F;
+            background: rgba(230, 140, 15, 0.08);
             margin-bottom: 30px;
-            font-size: 2rem;
+            font-size: 1.6rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            width: max-content;
+            transition: $transition-normal;
+
+            &:hover, &:focus {
+                background: rgba(230, 140, 15, 0.14);
+                transition: $transition-normal;
+            }
         }
 
         .description {
