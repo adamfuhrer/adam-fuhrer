@@ -9,7 +9,6 @@ import {ProjectsComponent} from './components/projects/projects.component';
 import {SeikoFiveComponent} from './components/projects/watches/seiko-five/seiko-five.component';
 import {RolexSubmarinerComponent} from './components/projects/watches/rolex-submariner/rolex-submariner.component';
 import {FadeInDirective} from './directives/fade-in.directive';
-import {PinboardLinksComponent} from './components/pinboard-links/pinboard-links.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {MechanicalWatchesAccuracyComponent} from './components/projects/watches/mechanical-watches-accuracy/mechanical-watches-accuracy.component';
 import {NavigationService} from './services/navigation.service';
@@ -23,7 +22,6 @@ import {TheCuratedFeedComponent} from './components/projects/the-curated-feed/th
         SeikoFiveComponent,
         RolexSubmarinerComponent,
         FadeInDirective,
-        PinboardLinksComponent,
         NavigationComponent,
         MechanicalWatchesAccuracyComponent,
         TheCuratedFeedComponent
