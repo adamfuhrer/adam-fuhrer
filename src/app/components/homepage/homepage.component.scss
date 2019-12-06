@@ -86,7 +86,7 @@ $swing-degrees: 5deg;
                 }
             }
 
-            .card {
+            .profile-card {
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -98,7 +98,7 @@ $swing-degrees: 5deg;
                 max-width: 680px;
                 box-shadow: $box-shadow-strong;
                 z-index: 1;
-                background: linear-gradient(150deg, #26B394, hsla(167, 65%, 42%, 1), hsla(167, 65%, 32%, 1));
+                background: linear-gradient(150deg, $green, hsla(167, 65%, 42%, 1), hsla(167, 65%, 34%, 1));
 
                 button.ghost {
                     position: absolute;
@@ -115,9 +115,9 @@ $swing-degrees: 5deg;
                     border: 1px solid rgba(255, 255, 255, 0.6);
 
                     img {
-                        width: 24px;
-                        height: 24px;
-                        min-width: 24px;
+                        width: 22px;
+                        height: 22px;
+                        min-width: 22px;
                     }
 
                     &:hover, &:focus {
@@ -137,7 +137,7 @@ $swing-degrees: 5deg;
                         min-width: $head-shot-image-width;
                         margin-right: 40px;
                         border-radius: 50%;
-                        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+                        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.26);
                     }
 
                     .right-content {
@@ -213,7 +213,7 @@ $swing-degrees: 5deg;
                     max-width: 260px;
                     height: 54px;
                     background: rgba(255, 255, 255, 0.94);
-                    color: $green;
+                    color: #20977E;
                     border-radius: 8px;
                     box-shadow: $box-shadow-strong;
                     font-weight: $semi-bold;
@@ -246,8 +246,14 @@ $swing-degrees: 5deg;
         box-shadow: $box-shadow-weak;
         transition: $transition-normal;
 
+        a {
+            width: 40px;
+            height: 40px;
+            padding-bottom: 2px;
+        }
+
         svg {
-            width: 18px;
+            width: 22px;
             fill: #555555;
             transition: $transition-normal;
         }
@@ -263,7 +269,7 @@ $swing-degrees: 5deg;
     }
 
     @media screen and (max-width: 880px) {
-        margin-top: -80px;
+        margin-top: -106px;
 
         .content-wrapper {
             margin-top: 0;
@@ -276,9 +282,8 @@ $swing-degrees: 5deg;
                     display: none;
                 }
 
-                .card {
-                    padding-left: 30px;
-                    padding-right: 30px;
+                .profile-card {
+                    padding: 30px;
 
                     button.ghost {
                         display: none;
@@ -286,6 +291,7 @@ $swing-degrees: 5deg;
 
                     .profile {
                         flex-direction: column;
+                        margin-bottom: 30px;
 
                         img.headshot {
                             margin-bottom: 20px;
@@ -299,7 +305,7 @@ $swing-degrees: 5deg;
                             .name-wrapper {
                                 height: 100%;
                                 align-items: center;
-                                margin-bottom: 40px;
+                                margin-bottom: 20px;
 
                                 .name {
                                     font-size: 4.2rem;
