@@ -1,1 +1,1 @@
-An Angular project by Adam Fuhrer.
+An Angular project by Adam Fuhrer. Made with Typescript, HTML & SCSS.
