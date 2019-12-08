@@ -15,7 +15,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             text-align: center;
 
             .precision {
@@ -78,7 +78,7 @@
     .timeline {
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 50px;
 
         .timeline-label {
             margin-left: auto;
@@ -153,6 +153,11 @@
                     color: $oil;
                     font-style: italic;
                     font-size: 2.4rem;
+
+                    //font-size: 2.6rem;
+                    //font-family: $amaranth;
+                    //letter-spacing: 2px;
+                    //line-height: 1;
                 }
 
                 .average-per-day {
@@ -177,28 +182,36 @@
         display: flex;
         justify-content: center;
 
-        .card {
+        .primary-card {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            height: 180px;
-            max-width: 300px;
+            width: 100%;
+            padding: 30px;
+            max-width: 400px;
+            box-shadow: $box-shadow-strong;
+            background: linear-gradient(150deg, $green, hsla(167, 65%, 42%, 1), hsla(167, 65%, 34%, 1));
+            color: $white;
+            font-size: 3.2rem;
+            text-align: center;
+            border-radius: 10px;
+            text-shadow: 0 1px rgba(0, 0, 0, 0.14);
 
             .results-label {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-weight: $light;
+                letter-spacing: 1px;
                 margin-bottom: 10px;
-                font-weight: 700;
-                color: $green;
-                font-size: 2.4rem;
+                color: $white;
             }
 
             .result {
-                font-size: 2.4rem;
-                color: $oil;
+                font-family: $amaranth;
                 font-weight: $semi-bold;
+                line-height: 1.4;
 
                 + .result {
                     margin-top: 4px;
@@ -211,7 +224,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 90px;
+        margin-top: 80px;
 
         img {
             border-radius: 10px;
@@ -272,6 +285,20 @@
                         }
                     }
                 }
+            }
+        }
+
+        .results-wrapper {
+            .primary-card {
+                font-size: 2.8rem;
+            }
+        }
+
+        .image-wrapper {
+            margin-top: 40px;
+
+            img {
+                max-width: 100%;
             }
         }
     }
