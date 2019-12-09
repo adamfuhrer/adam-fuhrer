@@ -31,10 +31,6 @@
                     width: 80px;
                     min-width: 80px;
                 }
-
-                .text {
-                    font-size: 1.6rem;
-                }
             }
         }
     }
@@ -75,6 +71,7 @@
 
                 .precision {
                     font-weight: $medium;
+                    color: $oil;
                 }
             }
 
