@@ -1,7 +1,7 @@
 @import 'vars';
 
 h1 {
-    font-family: $serif;
+    font-family: $amaranth;
     font-size: 4rem;
     color: $oil;
     font-weight: $regular;
@@ -10,11 +10,10 @@ h1 {
 }
 
 h2 {
-    font-family: $serif;
+    font-family: $amaranth;
     font-size: 2.4rem;
     color: $oil;
-    font-weight: $light;
-    font-style: italic;
+    font-weight: $regular;
 
     &.large {
         letter-spacing: 0.8px;
@@ -37,7 +36,7 @@ h4 {
 
 h5 {
     font-size: 2.4rem;
-    color: #666666;
+    color: $oil;
     font-weight: $light;
     letter-spacing: 1px;
 }
