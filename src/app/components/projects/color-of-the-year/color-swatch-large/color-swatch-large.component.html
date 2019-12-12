@@ -7,8 +7,8 @@
         </div>
         <div class="right">
             <div class="year">{{year}}</div>
-            <div class="links">
-                <div class="top">
+            <div class="links" [style.justify-content]="link ? 'space-between' : 'center'">
+                <div class="top" *ngIf="link">
                     <a class="link" href="{{link}}" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0" y="0" viewBox="0 0 283.92 283.92" xml:space="preserve" enable-background="new 0 0 283.922 283.922">
                             <path d="M266.42 0h-97.62c-9.65 0-17.5 7.85-17.5 17.5 0 9.65 7.85 17.5 17.5 17.5h55.38l-92.37 92.37c-3.31 3.31-5.13 7.7-5.13 12.38 0 4.68 1.82 9.07 5.13 12.37 3.31 3.31 7.7 5.13 12.38 5.13 4.67 0 9.07-1.82 12.38-5.13l92.37-92.37v55.38c0 9.65 7.85 17.5 17.5 17.5 9.65 0 17.5-7.85 17.5-17.5V17.5C283.92 7.85 276.07 0 266.42 0z"/>
