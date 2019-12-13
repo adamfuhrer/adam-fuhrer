@@ -12,11 +12,12 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
         right: 20px;
         width: 44px;
         height: 44px;
-        background: $green;
+        background: $white;
         border-radius: 50%;
         z-index: 1;
         box-shadow: $box-shadow-strong;
         transition: $transition-normal;
+        border: 2px solid $green;
 
         img {
             width: 24px;
@@ -26,13 +27,12 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
         svg {
             width: 28px;
             height: 28px;
-            fill: #FFFFFF;
+            fill: $green;
         }
 
         &:hover {
             transition: $transition-normal;
-            transform: translateY(-4px);
-            background: lighten($green, 4%);
+            transform: translateY(-5px);
         }
     }
 
@@ -82,12 +82,11 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
 
         app-color-swatch-large {
             img {
-                height: auto;
-                max-width: 25%;
+                max-width: 23.5%;
                 position: relative;
 
                 &.large {
-                    max-width: 50%;
+                    max-width: 52.9%;
                 }
 
                 + img {
@@ -154,9 +153,17 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
     }
 
     @media screen and (max-width: $breakpoint-small) {
-        .palette-wrapper {
-            margin-left: -20px;
-            margin-right: -20px;
+        .page-wrapper {
+            .palette-wrapper {
+                margin-left: -24px;
+                margin-right: -24px;
+            }
+
+            .swatches-wrapper {
+                margin-bottom: 14px;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
         }
     }
 

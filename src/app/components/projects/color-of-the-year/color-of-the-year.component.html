@@ -36,11 +36,11 @@
     </div>
     <div class="toggle-wrapper">
         <mat-slide-toggle [checked]="isHidingColorBar" color="accent" (change)="onShowColorsToggleChange($event)">
-            Hide color bars
+            Hide Pantone color bars
         </mat-slide-toggle>
     </div>
 
-    <div class="palette-wrapper" [fadeIn]="isHidingColorBar" fadeDuration="1600ms">
+    <div class="palette-wrapper" [fadeIn]="isHidingColorBar" fadeDuration="1200ms">
         <app-color-swatch-large name="Classic Blue"
                                 pantone="Pantone 19-4052"
                                 hex="#0F4C81"

@@ -93,6 +93,14 @@
         }
     }
 
+    .images {
+        display: flex;
+        height: 100%;
+        position: relative;
+        align-items: flex-start;
+        //max-height: 320px;
+    }
+
     &.has-second-color {
         .top-bar {
             .left {
@@ -128,13 +136,6 @@
         }
     }
 
-    .images {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        max-height: 320px;
-        position: relative;
-    }
 
     &.is-hiding-color-bar {
         padding-top: 4px;
@@ -164,8 +165,6 @@
                 font-size: 2.4rem;
             }
         }
-
-
     }
 
     @media screen and (max-width: $breakpoint-medium) {
