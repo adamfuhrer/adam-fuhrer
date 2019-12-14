@@ -52,7 +52,7 @@
         }
     }
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: $breakpoint-medium) {
         .project-name {
             width: 100%;
 

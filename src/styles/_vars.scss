@@ -4,7 +4,11 @@ $amaranth: 'Amaranth', sans-serif;
 $serif: 'Vidaloka', serif;
 
 // Dimensions
-$content-width: 880px;
+$content-width: 900px;
+
+// Breakpoints
+$breakpoint-medium: $content-width;
+$breakpoint-small: 560px;
 
 // Colours
 $teal: #1398AF;
@@ -25,10 +29,12 @@ $white: #FFFFFF;
 // Shadows
 $box-shadow-weak: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 $box-shadow-strong: 0 4px 8px rgba(0, 0, 0, 0.18);
+$text-shadow-normal: 0 1px rgba(0, 0, 0, 0.14);
 
 // Transitions
 $ease: cubic-bezier(0.215, 0.61, 0.355, 1);
 $transition-normal: all 350ms $ease 0s;
+$transition-slow: all 480ms $ease 0s;
 
 // Font Weights
 $light: 300;

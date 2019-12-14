@@ -1,0 +1,11 @@
+<button class="color-wrapper"
+        tabindex="0"
+        (click)="onClick()"
+        [style.background]="color">
+    <span class="text-wrapper" tabindex="-1">
+        <div *ngIf="secondColor"
+            class="second-color"
+            [style.background]="secondColor"></div>
+        <div class="year">{{year}}</div>
+    </span>
+</button>

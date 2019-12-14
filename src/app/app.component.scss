@@ -2,9 +2,9 @@
 
 :host {
     display: block;
-    padding: 80px 40px 180px 40px;
+    padding: 80px 0 180px 0;
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: $breakpoint-medium) {
         padding: 40px 24px 100px 24px;
     }
 }

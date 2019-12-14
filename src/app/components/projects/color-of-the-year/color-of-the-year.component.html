@@ -1,0 +1,416 @@
+<button class="back-to-top" title="Back to top" (click)="onScrollToTopClick()">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="7.7 10.1 11 6.8 11 17 11 21 13 21 13 17 13 6.8 16.2 10 17.6 8.6 13.4 4.4 12 3 10.6 4.4 6.3 8.7"/>
+    </svg>
+</button>
+<div class="page-wrapper" fadeIn>
+    <h1>Visualizing Every Pantone Color of the Year</h1>
+    <div class="heading-description">22 Colors From 2020-2000</div>
+    <div class="swatches-wrapper">
+        <app-color-swatch *ngFor="let color of colorSwatches"
+                          [color]="color.color"
+                          [secondColor]="color.secondColor"
+                          [year]="color.year">
+        </app-color-swatch>
+    </div>
+    <div class="description">
+        <p>
+            The <a href="https://www.pantone.com/color-systems/pantone-color-systems-explained">Pantone Color System</a> is one of the most important color matching systems in the world.
+            Originating in 1963, the system aimed to help bring a solution to the complicated color matching process in the printing industry. Not
+            long after, Pantone became the easiest and simplest way to classify, communicate and match colors with the
+            use of a color catalog in a fan format. Every color, in every tone and tint was given a <a href="https://www.pantone.com/color-finder">unique number</a> to classify
+            it. For over 40 years, Pantone has been the go-to color matching system for not only the design industry but
+            also paint, textile and plastic manufacturers.
+        </p>
+        <p>
+            In 2000, the Pantone Color Institute created the <a href="https://www.pantone.com/color-systems/pantone-color-systems-explained"><i>Pantone Color of the Year</i></a> as a way to inspire art and
+            design in all of its forms for the upcoming year. The color experts at Pantone make their pick based on
+            “what is needed in our world today.” To commemorate over two decades of Pantone’s color choices, I built a
+            palette that matches each color to imagery from some of my favorite artists and photographers from around
+            the world. Each image has a link attached to it, which will take you to the artist or photographer's website.
+        </p>
+    </div>
+    <div class="toggle-wrapper">
+        <mat-slide-toggle [checked]="isHidingColorBar" color="accent" (change)="onShowColorsToggleChange($event)">
+            Hide Pantone color bars
+        </mat-slide-toggle>
+    </div>
+
+    <div class="palette-wrapper" [fadeIn]="isHidingColorBar" fadeDuration="1200ms">
+        <app-color-swatch-large name="Classic Blue"
+                                pantone="Pantone 19-4052"
+                                hex="#0F4C81"
+                                year="2020"
+                                id="2020"
+                                link="https://store.pantone.com/uk/en/color-of-the-year-2020/"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large" href="https://www.behance.net/thisset">
+                <img  src="assets/images/pantone/2020-01.jpg" alt="thisset">
+            </a>
+            <a href="https://cargocollective.com/fitzkrueger">
+                <img src="assets/images/pantone/2020-02.jpg" alt="Photographer Fitz Krueger">
+            </a>
+            <a href="http://www.jeongmeeyoon.com/">
+                <img src="assets/images/pantone/2020-03.jpg" alt="Jeongmee Yoon The Pink and Blue Project Photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Living Coral"
+                                pantone="Pantone 16-1546"
+                                hex="#FF6F61"
+                                year="2019"
+                                id="2019"
+                                link="https://store.pantone.com/uk/en/color-of-the-year-2019/"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://www.jenmann.com/">
+                <img src="assets/images/pantone/2019-03.jpg" alt="Jen Mann painting">
+            </a>
+            <a class="large" href="https://www.simondavidson.com.au/">
+                <img  src="assets/images/pantone/2019-02.jpg" alt="Simon Davidson photography">
+            </a>
+            <a href="http://www.leonardoworx.com/">
+                <img src="assets/images/pantone/2019-01.jpg" alt="Leonardo Worx artist">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Ultra Violet"
+                                pantone="Pantone 18-3838"
+                                hex="#5F4B8B"
+                                year="2018"
+                                id="2018"
+                                link="https://store.pantone.com/uk/en/color-of-the-year-2018/"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://akfaoro.com/">
+                <img src="assets/images/pantone/2018-01.jpg" alt="Alyssa Katherine Faoro photography">
+            </a>
+            <a href="https://www.valentin-fougeray.com/">
+                <img src="assets/images/pantone/2018-02.jpg" alt="Valentin Fougeray photography">
+            </a>
+            <a class="large" href="http://notwo.org/">
+                <img class="large" src="assets/images/pantone/2018-03.jpg" alt="Tamas Horvath photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Greenery"
+                                pantone="Pantone 15-0343"
+                                hex="#88B04B"
+                                year="2017"
+                                id="2017"
+                                link="https://store.pantone.com/uk/en/color-of-the-year-2017/"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large" href="http://www.oliviasteele.com/">
+                <img src="assets/images/pantone/2017-03.jpg" alt="Olivia Steele neon art">
+            </a>
+            <a href="http://nicolakloosterman.com/">
+                <img src="assets/images/pantone/2017-02.jpg" alt="Nicola Kloosterman collage">
+            </a>
+            <a href="http://www.palast.fr/">
+                <img src="assets/images/pantone/2017-01.jpg" alt="Julien Palast art">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Serenity"
+                                pantone="Pantone 15-3913"
+                                hex="#92A8D1"
+                                nameSecond="Rose Quartz"
+                                pantoneSecond="Pantone 13-1520"
+                                hexSecond="#F7CAC9"
+                                year="2016"
+                                id="2016"
+                                link="https://store.pantone.com/uk/en/rose-quartz-serenity-2016-color-of-the-year/"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large" href="http://www.samoctigan.com/">
+                <img src="assets/images/pantone/2016-01.jpg" alt="Sam Octigan painting">
+            </a>
+            <a href="https://vishalmarapon.com/">
+                <img src="assets/images/pantone/2016-02.jpg" alt="Vishal Marapon photography">
+            </a>
+            <a href="https://youarerockstar.tumblr.com/">
+                <img src="assets/images/pantone/2016-03.jpg" alt="Nicholas Mottola Jacobsen collage art">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Marsala"
+                                pantone="Pantone 18-1438"
+                                hex="#955251"
+                                year="2015"
+                                id="2015"
+                                link="https://store.pantone.com/uk/en/marsala-2015-color-of-the-year/"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="http://www.vonnsumner.com/">
+                <img src="assets/images/pantone/2015-01.jpg" alt="Vonn Sumner painting">
+            </a>
+            <a class="large" href="https://www.diegobrambilla.com/">
+                <img src="assets/images/pantone/2015-03.jpg" alt="Diego Brambilla photography">
+            </a>
+            <a href="https://natashakristian.com/">
+                <img src="assets/images/pantone/2015-02.jpg" alt="Natasha Kristian photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Radiant Orchid"
+                                pantone="Pantone 18-3224"
+                                hex="#B163A3"
+                                year="2014"
+                                id="2014"
+                                link="https://store.pantone.com/uk/en/radiant-orchid-2014-color-of-the-year/"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large" href="http://www.danielrich.net/">
+                <img src="assets/images/pantone/2014-01.jpg" alt="Daniel Rich painting">
+            </a>
+            <a href="https://www.kipomolade.com/">
+                <img src="assets/images/pantone/2014-03.jpg" alt="Kip Omolade painting">
+            </a>
+            <a href="http://www.kellyreemtsen.com/">
+                <img src="assets/images/pantone/2014-02.jpg" alt="Kelly Reemsten art">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Emerald"
+                                pantone="Pantone 17-5641"
+                                hex="#009473"
+                                year="2013"
+                                id="2013"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2013"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://jkbfletcher.squarespace.com/">
+                <img src="assets/images/pantone/2013-02.jpg" alt="JKB Fletcher painting">
+            </a>
+            <a class="large" href="http://www.robertminervini.com/">
+                <img src="assets/images/pantone/2013-01.jpg" alt="Daniel Rich painting">
+            </a>
+            <a href="http://www.alaynacoverly.com/">
+                <img src="assets/images/pantone/2013-03.jpg" alt="Alayna Coverly painting">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Tangerine Tango"
+                                pantone="Pantone 17-1463"
+                                hex="#DD4124"
+                                year="2012"
+                                id="2012"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2012"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large" href="http://yagohortal.com/">
+                <img src="assets/images/pantone/2012-03.jpg" alt="Yago Hortal painting">
+            </a>
+            <a href="http://tagchristof.com/">
+                <img src="assets/images/pantone/2012-02.jpg" alt="Tag Christof photography">
+            </a>
+            <a href="https://www.instagram.com/amandajasnowskipascual/">
+                <img src="assets/images/pantone/2012-01.jpg" alt="Amanda Jasnowski photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Honeysuckle"
+                                pantone="Pantone 18-2120"
+                                hex="#D94F70"
+                                year="2011"
+                                id="2011"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2011"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://www.instagram.com/sofles/">
+                <img src="assets/images/pantone/2011-02.jpg" alt="sofles graffiti">
+            </a>
+            <a class="large" href="https://store.francoise-nielly.com/en/">
+                <img src="assets/images/pantone/2011-03.jpg" alt="Francoise Nielly painting">
+            </a>
+            <a href="http://www.lorihersberger.com/">
+                <img src="assets/images/pantone/2011-01.jpg" alt="Lori Hersberger neon art">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Turquoise"
+                                pantone="Pantone 15-5519"
+                                hex="#45B5AA"
+                                year="2010"
+                                id="2010"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2010"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large"  href="https://www.witchoria.com/">
+                <img src="assets/images/pantone/2010-01.jpg" alt="Witchoria art">
+            </a>
+            <a href="https://www.izaacenciso.com/">
+                <img src="assets/images/pantone/2010-02.jpg" alt="Izaac Enciso art">
+            </a>
+            <a href="https://www.instagram.com/artposer/">
+                <img src="assets/images/pantone/2010-03.jpg" alt="Alex Gardner painting">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Mimosa"
+                                pantone="Pantone 14-0848"
+                                hex="#F0C05A"
+                                year="2009"
+                                id="2009"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2009"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://loladupre.com/">
+                <img src="assets/images/pantone/2009-02.jpg" alt="Lola Dupre collage">
+            </a>
+            <a class="large" href="http://www.joseparla.com/">
+                <img src="assets/images/pantone/2009-01.jpg" alt="José Parlá art">
+            </a>
+            <a href="https://anamontiel.com/">
+                <img src="assets/images/pantone/2009-03.jpg" alt="Ana Montiel art">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Blue Iris"
+                                pantone="Pantone 18-3943"
+                                hex="#5A5B9F"
+                                year="2008"
+                                id="2008"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2008"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://www.instagram.com/sebasrivasart/">
+                <img src="assets/images/pantone/2008-03.jpg" alt="sebasrivasart">
+            </a>
+            <a href="https://chloe-newman.com/">
+                <img src="assets/images/pantone/2008-01.jpg" alt="Chloe Newman photography">
+            </a>
+            <a class="large" href="http://www.olafbreuning.com/">
+                <img src="assets/images/pantone/2008-02.jpg" alt="Olaf Breuning photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Chili Pepper"
+                                pantone="Pantone 19-1557"
+                                hex="#9B1B30"
+                                year="2007"
+                                id="2007"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2007"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://jmsanabria.com/">
+                <img src="assets/images/pantone/2007-01.jpg" alt="Juan Manuel Sanabria painting">
+            </a>
+            <a class="large" href="https://anastasiiachorna.com/">
+                <img src="assets/images/pantone/2007-03.jpg" alt="Anastasiia Chorna photography">
+            </a>
+            <a href="https://ollygeary.com/">
+                <img src="assets/images/pantone/2007-02.jpg" alt="Olly Geary photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Sand Dollar"
+                                pantone="Pantone 13-1106"
+                                hex="#DECDBE"
+                                year="2006"
+                                id="2006"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://robertgaudette.tumblr.com/">
+                <img src="assets/images/pantone/2006-01.jpg" alt="Robert Gaudette photography">
+            </a>
+            <a href="https://www.luiferreyra.com/">
+                <img src="assets/images/pantone/2006-03.jpg" alt="Lui Ferreyra art">
+            </a>
+            <a class="large" href="http://www.dojo.electrickettle.fr/">
+                <img src="assets/images/pantone/2006-02.jpg" alt="Matthieu Bourel collage">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Blue Turquoise"
+                                pantone="Pantone 15-5217"
+                                hex="#53B0AE"
+                                year="2005"
+                                id="2005"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large" href="https://kimkeever.com/">
+                <img src="assets/images/pantone/2005-02.jpg" alt="Kim Keever photography">
+            </a>
+            <a href="http://martenelder.com/">
+                <img src="assets/images/pantone/2005-01.jpg" alt="Marten Elder photography">
+            </a>
+            <a href="https://www.samuelzeller.ch/">
+                <img src="assets/images/pantone/2005-03.jpg" alt="Samuel Zeller photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Tigerlily"
+                                pantone="Pantone 17-1456"
+                                hex="#E2583E"
+                                year="2004"
+                                id="2004"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://franciscovargas.uk/">
+                <img src="assets/images/pantone/2004-03.jpg" alt="Franciscov Vargas photography">
+            </a>
+            <a href="https://www.behance.net/folster">
+                <img src="assets/images/pantone/2004-01.jpg" alt="Henrique Folster graphic design">
+            </a>
+            <a class="large" href="http://www.lisaericson.com/">
+                <img src="assets/images/pantone/2004-02.jpg" alt="Lisa Ericson painting">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Aqua Sky"
+                                pantone="Pantone 14-4811"
+                                hex="#7BC4C4"
+                                year="2003"
+                                id="2003"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large" href="https://floraborsi.com/">
+                <img src="assets/images/pantone/2003-03.jpg" alt="Flora Borsi photography">
+            </a>
+            <a href="http://spirandelli.com/">
+                <img src="assets/images/pantone/2003-02.jpg" alt="Noel Spirandelli photography">
+            </a>
+            <a href="http://www.martinalang.co.uk/">
+                <img src="assets/images/pantone/2003-01.jpg" alt="Martina Lang photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="True Red"
+                                pantone="Pantone 19-1664"
+                                hex="#BF1932"
+                                year="2002"
+                                id="2002"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a class="large" href="http://crucamara.com/">
+                <img src="assets/images/pantone/2002-01.jpg" alt="Cru Camara photography">
+            </a>
+            <a href="https://www.alexprager.com/">
+                <img src="assets/images/pantone/2002-02.jpg" alt="Alex Prager photography">
+            </a>
+            <a href="https://www.izaacenciso.com/">
+                <img src="assets/images/pantone/2002-03.jpg" alt="Izaac Enciso photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Fuchsia Rose"
+                                pantone="Pantone 17-2031"
+                                hex="#C74375"
+                                year="2001"
+                                id="2001"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://maciekjasik.com/">
+                <img src="assets/images/pantone/2001-01.jpg" alt="Maciek Jasik photography">
+            </a>
+            <a class="large" href="https://andreamartinucci.com/">
+                <img src="assets/images/pantone/2001-03.jpg" alt="Andrea Martinucci painting">
+            </a>
+            <a href="http://crucamara.com/">
+                <img src="assets/images/pantone/2001-02.jpg" alt="Cru Camara photography">
+            </a>
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Cerulean"
+                                pantone="Pantone 15-4020"
+                                hex="#9BB7D4"
+                                year="2000"
+                                id="2000"
+                                [isHidingColorBar]="isHidingColorBar">
+            <a href="https://www.kimbyungkwan.com/">
+                <img src="assets/images/pantone/2000-03.jpg" alt="Kim Byungkwan collage">
+            </a>
+            <a href="https://annabukliewer.com/">
+                <img src="assets/images/pantone/2000-02.jpg" alt="Anna Bukliewer collage">
+            </a>
+            <a class="large" href="http://www.inaphotography.com/">
+                <img src="assets/images/pantone/2000-01.jpg" alt="Ina Jang photography">
+            </a>
+        </app-color-swatch-large>
+    </div>
+
+
+</div>

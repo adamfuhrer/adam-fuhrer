@@ -1,0 +1,72 @@
+@import '../../../../../styles/vars';
+
+:host {
+    margin-left: 3px;
+    margin-top: 3px;
+    flex-basis: 13.3%;
+    flex-grow: 0;
+
+    .color-wrapper {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        height: 70px;
+        width: 100%;
+        font-family: $amaranth;
+        font-size: 2.6rem;
+        border-radius: 2px;
+        color: $white;
+        text-shadow: $text-shadow-normal;
+        user-select: none;
+        transform: scale(1);
+        transition: $transition-slow;
+
+        &:hover, &:focus  {
+            cursor: pointer;
+            outline: none;
+            transform: scale(1.16);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
+            z-index: 1;
+            transition: $transition-slow;
+        }
+
+        .text-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 70px;
+
+            &:focus {
+                outline: none;
+            }
+
+            .second-color {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                width: 50%;
+                z-index: -1;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+        .color-wrapper {
+            min-width: 68px;
+            height: 40px;
+            font-size: 1.6rem;
+
+            &:hover, &:focus {
+                transform: scale(1.24);
+            }
+
+            .text-wrapper {
+                height: 40px;
+            }
+        }
+    }
+}

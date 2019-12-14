@@ -1,0 +1,191 @@
+@import '../../../../styles/vars';
+$pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #92A8D1, #F7CAC9, #955251, #B163A3, #009473, #DD4124, #D94F70, #45B5AA, #F0C05A, #5A5B9F, #9B1B30, #DECDBE, #53B0AE, #E2583E, #7BC4C4, #BF1932, #C74375, #9BB7D4);
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: $box-shadow-strong;
+        transition: $transition-normal;
+        border: 2px solid $green;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $green;
+        }
+
+        &:hover {
+            transition: $transition-normal;
+            transform: translateY(-5px);
+        }
+    }
+
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: $content-width;
+
+        h1 {
+            text-align: center;
+        }
+
+        .heading-description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #888888;
+            font-family: $sans-serif;
+            font-size: 3rem;
+            font-weight: 300;
+        }
+
+        .swatches-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .description {
+            margin-bottom: 20px;
+        }
+
+        .palette-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        app-color-swatch-large {
+            a {
+                max-width: 23.5%;
+                overflow: hidden;
+                opacity: 1;
+
+                &:hover, &:focus {
+                    opacity: 0.8;
+                }
+
+                + a {
+                    margin-left: 4px;
+                }
+
+                &.large {
+                    max-width: 52.9%;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                img {
+                    width: 100%;
+                    position: relative;
+                }
+            }
+
+            + app-color-swatch-large {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .toggle-wrapper {
+        display: flex;
+        height: 40px;
+        justify-content: flex-end;
+        align-items: center;
+
+        ::ng-deep {
+            mat-slide-toggle {
+                height: 100%;
+                box-shadow: $box-shadow-weak;
+                border-radius: 6px;
+
+                .mat-slide-toggle-label {
+                    padding: 10px;
+                    cursor: pointer;
+                    background: $off-white;
+                    border: 1px solid #F1F1F1;
+                    border-radius: 6px;
+                }
+
+                .mat-slide-toggle-content {
+                    font-family: $sans-serif;
+                    color: $oil;
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+
+    &.is-hiding-color-bar {
+        .page-wrapper {
+            app-color-swatch-large {
+                + app-color-swatch-large {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .toggle-wrapper {
+            margin-bottom: 14px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+        .page-wrapper {
+            .heading-description {
+                font-size: 2.4rem;
+            }
+
+            app-color-swatch-large {
+                + app-color-swatch-large {
+                    margin-top: 0;
+                }
+            }
+
+            .palette-wrapper {
+                margin-left: -24px;
+                margin-right: -24px;
+            }
+
+            .swatches-wrapper {
+                margin-bottom: 30px;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        .page-wrapper {
+            .swatches-wrapper {
+                justify-content: center;
+                padding-bottom: 22px;
+                padding-top: 18px;
+                padding-left: 0;
+                padding-right: 2px;
+                border: 1px solid #f1f1f1;
+                box-shadow: $box-shadow-strong;
+                background: $off-white;
+                border-radius: 15px;
+            }
+        }
+    }
+}

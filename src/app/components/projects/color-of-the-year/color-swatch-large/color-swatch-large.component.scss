@@ -1,0 +1,219 @@
+@import '../../../../../styles/vars';
+
+:host {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+
+    .card-wrapper {
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        font-family: $amaranth;
+        background: $off-white;
+        box-shadow: $box-shadow-strong;
+    }
+
+    .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $white;
+        text-shadow: $text-shadow-normal;
+        width: 100%;
+        height: 160px;
+        position: relative;
+        margin-bottom: 4px;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin-right: 20px;
+            padding-left: 30px;
+        }
+
+        .name {
+            font-size: 4rem;
+            line-height: 1.2;
+            min-width: max-content;
+        }
+
+        .pantone, .hex {
+            font-size: 1.8rem;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            .year {
+                font-size: 6rem;
+            }
+
+            .links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-right: 10px;
+                margin-left: 10px;
+
+                .link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 30px;
+                    background: transparent;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-shadow: none;
+
+                    svg {
+                        transition: $transition-normal;
+                        fill: rgba(255, 255, 255, 0.6);
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.9);
+
+                        svg {
+                            fill: rgba(255, 255, 255, 0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .images {
+        display: flex;
+        height: 100%;
+        position: relative;
+        align-items: flex-start;
+        max-height: 312px;
+        overflow: hidden;
+    }
+
+    &.has-second-color {
+        .top-bar {
+            .left {
+                width: 50%;
+            }
+
+            .right {
+                position: relative;
+                width: 50%;
+                padding-left: 30px;
+                justify-content: space-between;
+
+                .year {
+                    position: absolute;
+                    font-size: 2rem;
+                    top: 0;
+                    left: -21px;
+                }
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            .top-bar {
+                .right {
+                    padding-left: 20px;
+
+                    .year {
+                        font-size: 1.4rem;
+                        left: -14px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-hiding-color-bar {
+        padding-top: 4px;
+
+        .card-wrapper {
+            border-radius: 0;
+            background: $white;
+            box-shadow: none;
+            overflow: visible;
+        }
+
+        .year {
+            position: absolute;
+            top: 10px;
+            left: 24px;
+            color: $white;
+            font-size: 5rem;
+            font-family: $amaranth;
+            z-index: 1;
+            text-shadow: $text-shadow-normal;
+            pointer-events: none;
+        }
+
+        .images {
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            .year {
+                top: 10px;
+                left: 14px;
+                font-size: 2.4rem;
+            }
+
+            .images {
+                border-radius: 0;
+                align-items: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+        .card-wrapper {
+            border-radius: 0;
+            box-shadow: none;
+            background: $white;
+        }
+
+        .top-bar {
+            height: 110px;
+
+            .left {
+                padding-left: 20px;
+            }
+
+            .name {
+                font-size: 2.2rem;
+            }
+
+            .pantone, .hex {
+                font-size: 1.6rem;
+            }
+
+            .right {
+                .year {
+                    font-size: 3.2rem;
+                }
+
+                .links {
+                    margin-right: 6px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+
+                    .bottom {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

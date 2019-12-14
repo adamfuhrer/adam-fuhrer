@@ -1,4 +1,5 @@
 @import 'styles/base';
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
 
 button {
     border: 0;
@@ -24,10 +25,10 @@ button {
 a {
     color: $orange;
     text-decoration: none;
-    transition: $transition-normal;
+    transition: color 350ms $ease 0s;
 
     &:hover, &:focus {
-        color: lighten($orange, 6%);
+        color: darken($orange, 6%);
         outline: none;
     }
 }
