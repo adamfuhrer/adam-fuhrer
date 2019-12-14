@@ -6,7 +6,7 @@
 <div class="page-wrapper" fadeIn>
     <h1>Visualizing Every Pantone Color of the Year</h1>
     <div class="heading-description">22 Colors From 2020-2000</div>
-    <div class="swatches-wrapper">
+    <div class="top-colors">
         <app-color-swatch *ngFor="let color of colorSwatches"
                           [color]="color.color"
                           [secondColor]="color.secondColor"
@@ -25,14 +25,15 @@
         <p>
             In 2000, the Pantone Color Institute created the <a href="https://www.pantone.com/color-systems/pantone-color-systems-explained"><i>Pantone Color of the Year</i></a> as a way to inspire art and
             design in all of its forms for the upcoming year. The color experts at Pantone make their pick based on
-            “what is needed in our world today.” To commemorate over two decades of Pantone’s color choices, I built a
-            palette that matches each color to imagery from some of my favorite artists and photographers from around
-            the world. Each image has a link attached to it, which will take you to the artist or photographer's website.
+            “what is needed in our world today.” To commemorate over two decades of Pantone’s color choices, the palette
+            below matches each color to imagery from some of my favorite artists and photographers from around
+            the world. Each image has a link attached to it, which will take you to the artist or photographer's
+            website.
         </p>
     </div>
     <div class="toggle-wrapper">
         <mat-slide-toggle [checked]="isHidingColorBar" color="accent" (change)="onShowColorsToggleChange($event)">
-            Hide Pantone color bars
+            Only show images
         </mat-slide-toggle>
     </div>
 
@@ -47,11 +48,11 @@
             <a class="large" href="https://www.behance.net/thisset">
                 <img  src="assets/images/pantone/2020-01.jpg" alt="thisset">
             </a>
-            <a href="https://cargocollective.com/fitzkrueger">
-                <img src="assets/images/pantone/2020-02.jpg" alt="Photographer Fitz Krueger">
+            <a href="http://www.petracollins.com/">
+                <img src="assets/images/pantone/2020-02.jpg" alt="Frank Ocean by Petra Collins">
             </a>
-            <a href="http://www.jeongmeeyoon.com/">
-                <img src="assets/images/pantone/2020-03.jpg" alt="Jeongmee Yoon The Pink and Blue Project Photography">
+            <a href="https://www.astronautdinosaur.com/">
+                <img src="assets/images/pantone/2020-03.jpg" alt="Scott Listfield painting">
             </a>
         </app-color-swatch-large>
 
@@ -125,8 +126,8 @@
             <a href="https://vishalmarapon.com/">
                 <img src="assets/images/pantone/2016-02.jpg" alt="Vishal Marapon photography">
             </a>
-            <a href="https://youarerockstar.tumblr.com/">
-                <img src="assets/images/pantone/2016-03.jpg" alt="Nicholas Mottola Jacobsen collage art">
+            <a href="https://www.instagram.com/tenr/">
+                <img src="assets/images/pantone/2016-03.jpg" alt="tenr photo">
             </a>
         </app-color-swatch-large>
 
@@ -227,14 +228,14 @@
                                 id="2010"
                                 link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2010"
                                 [isHidingColorBar]="isHidingColorBar">
+            <a href="https://www.alasdairmclellan.com/">
+                <img src="assets/images/pantone/2010-03.jpg" alt="Frank Ocean by Alasdair McLellan">
+            </a>
             <a class="large"  href="https://www.witchoria.com/">
-                <img src="assets/images/pantone/2010-01.jpg" alt="Witchoria art">
+                <img src="assets/images/pantone/2010-04.jpg" alt="Witchoria art">
             </a>
             <a href="https://www.izaacenciso.com/">
                 <img src="assets/images/pantone/2010-02.jpg" alt="Izaac Enciso art">
-            </a>
-            <a href="https://www.instagram.com/artposer/">
-                <img src="assets/images/pantone/2010-03.jpg" alt="Alex Gardner painting">
             </a>
         </app-color-swatch-large>
 
@@ -245,11 +246,11 @@
                                 id="2009"
                                 link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2009"
                                 [isHidingColorBar]="isHidingColorBar">
-            <a href="https://loladupre.com/">
-                <img src="assets/images/pantone/2009-02.jpg" alt="Lola Dupre collage">
-            </a>
             <a class="large" href="http://www.joseparla.com/">
                 <img src="assets/images/pantone/2009-01.jpg" alt="José Parlá art">
+            </a>
+            <a href="https://loladupre.com/">
+                <img src="assets/images/pantone/2009-02.jpg" alt="Lola Dupre collage">
             </a>
             <a href="https://anamontiel.com/">
                 <img src="assets/images/pantone/2009-03.jpg" alt="Ana Montiel art">
@@ -305,7 +306,7 @@
                 <img src="assets/images/pantone/2006-03.jpg" alt="Lui Ferreyra art">
             </a>
             <a class="large" href="http://www.dojo.electrickettle.fr/">
-                <img src="assets/images/pantone/2006-02.jpg" alt="Matthieu Bourel collage">
+                <img src="assets/images/pantone/2006-04.jpg" alt="Matthieu Bourel collage">
             </a>
         </app-color-swatch-large>
 
@@ -332,11 +333,11 @@
                                 year="2004"
                                 id="2004"
                                 [isHidingColorBar]="isHidingColorBar">
+            <a href="hhttps://www.alexacushing.com/">
+                <img src="assets/images/pantone/2004-01.jpg" alt="Alexa Cushing photography">
+            </a>
             <a href="https://franciscovargas.uk/">
                 <img src="assets/images/pantone/2004-03.jpg" alt="Franciscov Vargas photography">
-            </a>
-            <a href="https://www.behance.net/folster">
-                <img src="assets/images/pantone/2004-01.jpg" alt="Henrique Folster graphic design">
             </a>
             <a class="large" href="http://www.lisaericson.com/">
                 <img src="assets/images/pantone/2004-02.jpg" alt="Lisa Ericson painting">
@@ -349,14 +350,14 @@
                                 year="2003"
                                 id="2003"
                                 [isHidingColorBar]="isHidingColorBar">
+            <a href="http://www.martinalang.co.uk/">
+                <img src="assets/images/pantone/2003-01.jpg" alt="Martina Lang photography">
+            </a>
             <a class="large" href="https://floraborsi.com/">
                 <img src="assets/images/pantone/2003-03.jpg" alt="Flora Borsi photography">
             </a>
             <a href="http://spirandelli.com/">
                 <img src="assets/images/pantone/2003-02.jpg" alt="Noel Spirandelli photography">
-            </a>
-            <a href="http://www.martinalang.co.uk/">
-                <img src="assets/images/pantone/2003-01.jpg" alt="Martina Lang photography">
             </a>
         </app-color-swatch-large>
 
@@ -383,14 +384,14 @@
                                 year="2001"
                                 id="2001"
                                 [isHidingColorBar]="isHidingColorBar">
-            <a href="https://maciekjasik.com/">
-                <img src="assets/images/pantone/2001-01.jpg" alt="Maciek Jasik photography">
+            <a href="https://kawsone.com/">
+                <img src="assets/images/pantone/2001-01.jpg" alt="Kaws painting">
             </a>
-            <a class="large" href="https://andreamartinucci.com/">
-                <img src="assets/images/pantone/2001-03.jpg" alt="Andrea Martinucci painting">
+            <a href="http://www.petracollins.com/">
+                <img src="assets/images/pantone/2001-02.jpg" alt="Petra Collins photography">
             </a>
-            <a href="http://crucamara.com/">
-                <img src="assets/images/pantone/2001-02.jpg" alt="Cru Camara photography">
+            <a class="large" href="http://www.jeongmeeyoon.com/">
+                <img src="assets/images/pantone/2001-03.jpg" alt="Jeongmee Yoon The Pink and Blue Project Photography">
             </a>
         </app-color-swatch-large>
 
@@ -403,14 +404,16 @@
             <a href="https://www.kimbyungkwan.com/">
                 <img src="assets/images/pantone/2000-03.jpg" alt="Kim Byungkwan collage">
             </a>
-            <a href="https://annabukliewer.com/">
-                <img src="assets/images/pantone/2000-02.jpg" alt="Anna Bukliewer collage">
-            </a>
             <a class="large" href="http://www.inaphotography.com/">
                 <img src="assets/images/pantone/2000-01.jpg" alt="Ina Jang photography">
+            </a>
+            <a href="https://annabukliewer.com/">
+                <img src="assets/images/pantone/2000-02.jpg" alt="Anna Bukliewer collage">
             </a>
         </app-color-swatch-large>
     </div>
 
-
+    <div class="project-by">
+        <i>A project by <a href="https://adamfuhrer.com/">Adam Fuhrer</a>.</i>
+    </div>
 </div>
