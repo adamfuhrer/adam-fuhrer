@@ -73,18 +73,35 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
 
         app-color-swatch-large {
             a {
-                opacity: 1;
+                position: relative;
+                background-color:rgba(255,255,255,1);
 
-                &:hover, &:focus {
-                    opacity: 0.8;
+                // Workaround for Chrome since
+                &::after {
+                    position: absolute;
+                    content: '';
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    background: rgba(255, 255, 255, 0.0);
+                    transition: background 700ms $ease 0s;
                 }
 
-                + a {
-                    margin-left: 4px;
+                &:hover, &:focus {
+                    &::after {
+                        background: rgba(255, 255, 255, 0.18);
+                        transition: background 700ms $ease 0s;
+                    }
                 }
 
                 &:hover {
                     cursor: pointer;
+                }
+
+                + a {
+                    margin-left: 4px;
                 }
 
                 img {
@@ -101,10 +118,20 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
         .project-by {
             display: flex;
             justify-content: center;
+            align-items: center;
             margin-top: 60px;
             color: $oil;
             font-weight: $light;
             font-size: 1.6rem;
+
+            i {
+                margin-right: 6px;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 
