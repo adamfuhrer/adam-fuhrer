@@ -7,7 +7,10 @@ import {DOCUMENT} from '@angular/common';
 @Component({
     selector: 'app-color-of-the-year',
     templateUrl: './color-of-the-year.component.html',
-    styleUrls: ['./color-of-the-year.component.scss']
+    styleUrls: [
+        '../project-page.scss',
+        './color-of-the-year.component.scss'
+    ]
 })
 export class ColorOfTheYearComponent implements OnInit {
     @HostBinding('class.is-hiding-color-bar') isHidingColorBar = false;
@@ -18,10 +21,10 @@ export class ColorOfTheYearComponent implements OnInit {
                 private metaService: Meta,
                 @Inject(DOCUMENT) private document: any) {
         this.metaService.addTags([
-            // { property: 'og:title', content: 'Visualizing Every Pantone Color of the Year'},
-            // { property: 'og:description', content: 'Matching 22 Colors to imagery from some of my favourite artists and photographers.'},
-            // { property: 'og:image', content: 'https://adamfuhrer.com/assets/images/pantone/all-colors.jpg'},
-            // { property: 'og:url', content: 'https://adamfuhrer.com/visualizing-every-pantone-color-of-the-year'},
+            { property: 'og:title', content: 'Visualizing Every Pantone Color of the Year'},
+            { property: 'og:description', content: 'Matching 22 Colors to imagery from some of my favourite artists and photographers.'},
+            { property: 'og:image', content: 'https://adamfuhrer.com/assets/images/pantone/all-colors.jpg'},
+            { property: 'og:url', content: 'https://adamfuhrer.com/visualizing-every-pantone-color-of-the-year'},
             { name: 'twitter:title', content: 'Visualizing Every Pantone Color of the Year' },
             { name: 'twitter:description', content: 'Matching 22 Colors to imagery from some of my favourite artists and photographers.' },
             { name: 'twitter:image', content: 'https://adamfuhrer.com/assets/images/pantone/all-colors.jpg'},
@@ -32,11 +35,6 @@ export class ColorOfTheYearComponent implements OnInit {
             { name: 'facebook:image', content: 'https://adamfuhrer.com/assets/images/pantone/all-colors.jpg'},
             { name: 'facebook:url', content: 'https://adamfuhrer.com/visualizing-every-pantone-color-of-the-year'}
         ]);
-
-        this.metaService.updateTag({ property: 'og:title', content: 'Visualizing Every Pantone Color of the Year'});
-        this.metaService.updateTag({ property: 'og:description', content: 'Matching 22 Colors to imagery from some of my favourite artists and photographers.'});
-        this.metaService.updateTag({ property: 'og:image', content: 'https://adamfuhrer.com/assets/images/pantone/all-colors.jpg'});
-        this.metaService.updateTag({ property: 'og:url', content: 'https://adamfuhrer.com/visualizing-every-pantone-color-of-the-year'});
     }
 
     ngOnInit() {

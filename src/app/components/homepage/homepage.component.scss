@@ -50,10 +50,10 @@ $swing-degrees: 5deg;
             left: calc(50% - 8px);
             width: 16px;
             height: 16px;
-            background: $orange;
+            background: #ff92aa;
             border-radius: 50%;
             box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
-            border: 1px solid #d2800e;
+            border: 1px solid $pink;
             z-index: 1;
         }
 

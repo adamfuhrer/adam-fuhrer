@@ -2,10 +2,6 @@
 $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #92A8D1, #F7CAC9, #955251, #B163A3, #009473, #DD4124, #D94F70, #45B5AA, #F0C05A, #5A5B9F, #9B1B30, #DECDBE, #53B0AE, #E2583E, #7BC4C4, #BF1932, #C74375, #9BB7D4);
 
 :host {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     .back-to-top {
         position: fixed;
         bottom: 20px;
@@ -37,11 +33,6 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
     }
 
     .page-wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: $content-width;
-
         h1 {
             text-align: center;
         }
@@ -115,24 +106,7 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
             }
         }
 
-        .project-by {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 60px;
-            color: $oil;
-            font-weight: $light;
-            font-size: 1.6rem;
 
-            i {
-                margin-right: 6px;
-            }
-
-            img {
-                width: 20px;
-                height: 20px;
-            }
-        }
     }
 
     .toggle-wrapper {

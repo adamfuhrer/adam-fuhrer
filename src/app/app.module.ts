@@ -20,6 +20,7 @@ import {ColorSwatchLargeComponent} from './components/projects/color-of-the-year
 // Material
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import 'hammerjs';
+import { PortraitsComponent } from './components/projects/portraits/portraits.component';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import 'hammerjs';
         TheCuratedFeedComponent,
         ColorOfTheYearComponent,
         ColorSwatchComponent,
-        ColorSwatchLargeComponent
+        ColorSwatchLargeComponent,
+        PortraitsComponent
     ],
     imports: [
         BrowserModule,

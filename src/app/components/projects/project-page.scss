@@ -1,0 +1,43 @@
+@import '../../../styles/vars';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: $content-width;
+    }
+
+    .project-by {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        color: $oil;
+        font-weight: $light;
+        font-size: 1.8rem;
+
+        i {
+            margin-right: 6px;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+        .page-wrapper {
+            h1 {
+                font-size: 3.4rem;
+            }
+
+
+        }
+    }
+}
