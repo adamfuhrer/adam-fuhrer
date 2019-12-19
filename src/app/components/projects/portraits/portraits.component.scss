@@ -35,7 +35,6 @@
 
                     img {
                         width: 100%;
-                        max-width: 660px;
                     }
 
                     .photographer {
@@ -63,8 +62,12 @@
                 }
 
                 &.two-images {
-                    .image-wrapper + .image-wrapper {
-                        margin-left: 10%;
+                    .image-wrapper {
+                        width: 50%;
+
+                        + .image-wrapper {
+                            margin-left: 10%;
+                        }
                     }
                 }
             }
@@ -96,7 +99,7 @@
 
                     .image-wrapper {
                         .photographer {
-                            bottom: -34px;
+                            bottom: -36px;
                             font-size: 1.6rem;
                         }
                     }
