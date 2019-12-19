@@ -41,22 +41,25 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
 
                     .photographer {
                         position: absolute;
-                        left: -2px;
-                        bottom: -46px;
-                        font-size: 2.4rem;
-                        opacity: 1;
-                        transition: $transition-normal;
-                        color: transparent;
-                        background-clip: text;
+                        left: 0;
+                        bottom: -40px;
+                        font-size: 1.6rem;
                         background-size: cover;
-                        font-weight: 500;
-                        background-image: linear-gradient(90deg, $orange 0, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, $blue 72%, $green 86%, #6dba82 100%);
-                        -webkit-text-fill-color: transparent;
-                        -webkit-background-clip: text;
+                        font-weight: $medium;
+                        padding: 2px 8px;
+                        border-radius: 4px;
+                        transition: $transition-normal;
+                        color: $white;
+                        -webkit-text-fill-color: $white;
+                        text-shadow: $text-shadow-normal;
+                        background: linear-gradient(120deg, $orange 0, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, $blue 72%, $green 86%, #6dba82 100%);;
+                        -webkit-background-clip: unset;
+                        opacity: 0.96;
 
                         &:hover, &:focus {
                             transition: $transition-normal;
-                            opacity: 0.8;
+                            box-shadow: $box-shadow-strong;
+                            transform: translateY(-4px);
                         }
                     }
                 }
@@ -69,8 +72,8 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
             }
         }
 
-        .project-by {
-            margin-top: 180px;
+        .project-by-wrapper {
+            margin-top: 160px;
         }
     }
 
@@ -83,7 +86,6 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
 
             .heading-description {
                 text-align: unset;
-                font-size: 1.6rem;
             }
 
             .images-wrapper {
@@ -96,14 +98,14 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
 
                     .image-wrapper {
                         .photographer {
-                            bottom: -32px;
+                            bottom: -34px;
                             font-size: 1.6rem;
                         }
                     }
                 }
             }
 
-            .project-by {
+            .project-by-wrapper {
                 margin-top: 100px;
             }
         }

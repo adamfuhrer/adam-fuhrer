@@ -106,7 +106,9 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
             }
         }
 
-
+        .project-by-wrapper {
+            margin-top: 110px;
+        }
     }
 
     .toggle-wrapper {
@@ -191,8 +193,8 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
                 margin-right: -3px;
             }
 
-            .project-by {
-                margin-top: 30px;
+            .project-by-wrapper {
+                margin-top: 50px;
             }
         }
     }

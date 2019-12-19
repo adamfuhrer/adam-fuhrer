@@ -14,18 +14,13 @@
             <div class="year">{{year}}</div>
             <div class="links" [style.justify-content]="link ? 'space-between' : 'center'">
                 <div class="top" *ngIf="link">
-                    <a class="link" href="{{link}}">
+                    <a class="link" href="{{link}}" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0" y="0" viewBox="0 0 283.92 283.92" xml:space="preserve" enable-background="new 0 0 283.922 283.922">
                             <path d="M266.42 0h-97.62c-9.65 0-17.5 7.85-17.5 17.5 0 9.65 7.85 17.5 17.5 17.5h55.38l-92.37 92.37c-3.31 3.31-5.13 7.7-5.13 12.38 0 4.68 1.82 9.07 5.13 12.37 3.31 3.31 7.7 5.13 12.38 5.13 4.67 0 9.07-1.82 12.38-5.13l92.37-92.37v55.38c0 9.65 7.85 17.5 17.5 17.5 9.65 0 17.5-7.85 17.5-17.5V17.5C283.92 7.85 276.07 0 266.42 0z"/>
                             <path d="M201.14 253.92H30V82.79h128.71l30-30H15c-8.28 0-15 6.72-15 15v201.14c0 8.28 6.72 15 15 15h201.14c8.28 0 15-6.72 15-15V95.21l-30 30V253.92z"/>
                         </svg>
                     </a>
                 </div>
-<!--                <div class="bottom" *ngIf="imageSources">-->
-<!--                    <a class="link" href="{{imageSources[0]}}" target="_blank">1</a>-->
-<!--                    <a class="link" href="{{imageSources[1]}}" target="_blank">2</a>-->
-<!--                    <a class="link" href="{{imageSources[2]}}" target="_blank">3</a>-->
-<!--                </div>-->
             </div>
         </div>
     </div>
