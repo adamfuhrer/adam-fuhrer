@@ -47,9 +47,9 @@ $swing-degrees: 5deg;
         .thumbtack {
             position: absolute;
             top: -100px;
-            left: calc(50% - 8px);
-            width: 16px;
-            height: 16px;
+            left: calc(50% - 7px);
+            width: 14px;
+            height: 14px;
             background: #E68C0F;
             border-radius: 50%;
             box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -96,7 +96,7 @@ $swing-degrees: 5deg;
                 border-radius: 15px;
                 padding: 40px 30px;
                 width: 100%;
-                max-width: 600px;
+                max-width: 580px;
                 box-shadow: $box-shadow-strong;
                 z-index: 1;
                 //background: linear-gradient(150deg, $green, hsla(167, 65%, 42%, 1), hsla(167, 65%, 34%, 1));
@@ -153,9 +153,9 @@ $swing-degrees: 5deg;
                             .name {
                                 font-family: $amaranth;
                                 font-size: 5.4rem;
-                                font-weight: $bold;
+                                //font-weight: $bold;
                                 color: $white;
-                                letter-spacing: 2px;
+                                letter-spacing: 1px;
                                 line-height: 1;
                                 margin-top: 4px;
                             }
@@ -206,7 +206,7 @@ $swing-degrees: 5deg;
         }
 
         section.bio {
-            max-width: 600px;
+            max-width: 580px;
             margin-top: 60px;
             font-size: 2rem;
             color: $black;
@@ -217,7 +217,7 @@ $swing-degrees: 5deg;
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-width: 480px;
+            max-width: 460px;
             margin-top: 40px;
             border-radius: 10px;
 
@@ -227,10 +227,10 @@ $swing-degrees: 5deg;
                 transition: $transition-normal;
                 color: #444444;
                 font-style: normal;
-                font-size: 2.2rem;
+                font-size: 2rem;
                 padding: 14px;
                 width: 100%;
-                font-family: $amaranth;
+                font-weight: 500;
 
                 + .project-name {
                     border-top: 1px solid #EEEEEE;
