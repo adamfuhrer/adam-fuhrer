@@ -15,7 +15,7 @@ export class HomepageComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Adam Fuhrer');
+        this.titleService.setTitle('Adam Fuhrer | UX Developer');
 
         // Don't show breadcrumbs on homepage
         this.navigationService.emitBreadcrumbItems([]);
