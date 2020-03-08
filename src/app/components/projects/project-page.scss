@@ -10,6 +10,48 @@
         flex-direction: column;
         width: 100%;
         max-width: $content-width;
+
+        .links-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+
+            a.link {
+                background: $orange;
+                color: $white;
+                padding: 6px 8px;
+                border-radius: 6px;
+                transition: $transition-normal;
+                box-shadow: $box-shadow-weak;
+
+                &:hover, &:focus {
+                    background: lighten($orange, 8%);
+                }
+            }
+
+            .github {
+                width: 24px;
+                height: 24px;
+                margin-left: 10px;
+
+                svg {
+                    fill: #333333;
+                    width: 24px;
+                    height: 24px;
+                    transition: $transition-normal;
+                }
+
+                &:hover {
+                    svg {
+                        fill: #666666;
+                    }
+                }
+            }
+        }
+
+        a.screenshot {
+            margin-bottom: 60px;
+        }
     }
 
     .project-by-wrapper {
