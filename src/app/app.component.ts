@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
-declare let ga: Function;
+import { filter } from 'rxjs/operators';
+
+declare var gtag;
 
 @Component({
     selector: 'app-root',
@@ -8,14 +10,15 @@ declare let ga: Function;
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    constructor(private router: Router) {
-        // Scroll to top of page on route change
-        router.events.subscribe(nav => {
-            if (nav instanceof NavigationEnd) {
-                window.scrollTo(0, 0);
-                ga('set', 'page', nav.urlAfterRedirects);
-                ga('send', 'pageview');
-            }
+    constructor(router: Router) {
+        const navEndEvent$ = router.events.pipe(
+            filter(event => event instanceof NavigationEnd)
+        );
+        navEndEvent$.subscribe((event: NavigationEnd) => {
+            window.scrollTo(0, 0);
+            gtag('config', 'UA-43089105-2', {
+                'page_path': event.urlAfterRedirects
+            });
         });
     }
 }
