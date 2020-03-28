@@ -5,7 +5,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomepageComponent} from './components/homepage/homepage.component';
-import {ProjectsComponent} from './components/projects/projects.component';
 import {SeikoFiveComponent} from './components/projects/watches/seiko-five/seiko-five.component';
 import {RolexSubmarinerComponent} from './components/projects/watches/rolex-submariner/rolex-submariner.component';
 import {FadeInDirective} from './directives/fade-in.directive';
@@ -23,12 +22,12 @@ import {CssMondrianComponent} from './components/projects/css-mondrian/css-mondr
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import 'hammerjs';
 import { PortraitsComponent } from './components/projects/portraits/portraits.component';
+import { ColorsComponent } from './components/projects/colors/colors.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomepageComponent,
-        ProjectsComponent,
         SeikoFiveComponent,
         RolexSubmarinerComponent,
         FadeInDirective,
@@ -40,7 +39,8 @@ import { PortraitsComponent } from './components/projects/portraits/portraits.co
         ColorSwatchLargeComponent,
         PortraitsComponent,
         GlitchArtComponent,
-        CssMondrianComponent
+        CssMondrianComponent,
+        ColorsComponent
     ],
     imports: [
         BrowserModule,

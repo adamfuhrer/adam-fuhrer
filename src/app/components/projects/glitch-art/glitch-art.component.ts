@@ -15,7 +15,7 @@ export class GlitchArtComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Glitch Art Generator');
+        this.titleService.setTitle('Glitch Art Generator | Adam Fuhrer');
 
         this.navigationService.emitBreadcrumbItems([
             {

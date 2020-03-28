@@ -16,7 +16,7 @@ export class CssMondrianComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('CSS Mondrian');
+        this.titleService.setTitle('CSS Mondrian | Adam Fuhrer');
 
         this.navigationService.emitBreadcrumbItems([
             {
