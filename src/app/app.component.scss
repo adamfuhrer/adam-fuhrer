@@ -4,6 +4,7 @@
     display: block;
     padding-top: 80px;
     padding-bottom: 180px;
+    overflow: hidden;
 
     @media screen and (max-width: $breakpoint-medium) {
         padding: 40px 24px 100px 24px;

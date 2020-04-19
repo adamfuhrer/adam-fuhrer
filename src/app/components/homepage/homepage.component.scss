@@ -50,7 +50,7 @@ $swing-degrees: 5deg;
             left: calc(50% - 7px);
             width: 14px;
             height: 14px;
-            background: #E68C0F;
+            background: #CC7F16;
             border-radius: 50%;
             box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
             z-index: 1;
@@ -206,7 +206,7 @@ $swing-degrees: 5deg;
         section.bio {
             max-width: 580px;
             margin-top: 60px;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: $black;
             font-weight: $light;
         }
@@ -216,7 +216,7 @@ $swing-degrees: 5deg;
             grid-template-columns: 1fr 1fr;
             grid-gap: 40px;
             max-width: 1100px;
-            margin-top: 70px;
+            margin-top: 60px;
             padding-left: 40px;
             padding-right: 40px;
 
@@ -233,11 +233,11 @@ $swing-degrees: 5deg;
                 border-radius: 8px;
                 overflow: hidden;
                 background: $off-white;
-                transform: translateY(0);
+                transform: scale(1);
 
                 &:hover, &:focus {
                     transition: $transition-normal;
-                    transform: translateY(-4px);
+                    transform: scale(1.04);
                 }
 
                 img {
