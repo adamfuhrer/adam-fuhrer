@@ -6,11 +6,16 @@
             margin-bottom: 10px;
         }
 
+        h5 {
+            margin-bottom: 40px;
+        }
+
         img {
             width: 100%;
+            border-radius: 8px;
 
             + img {
-                margin-top: 80px;
+                margin-top: 60px;
             }
         }
     }
